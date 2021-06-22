@@ -8,6 +8,7 @@
 - Set Cookies
 ```python
 from flask import render_template, make_response
+import datetime
 
 @user.route('/set_cookie')
 def cart():
@@ -15,7 +16,7 @@ def cart():
     template = render_template('user/set_cookie.html')
     resp = make_response(template)
     
-    # Add expiry date for cookies
+    # Add expiry date for cookies. Expiry date is optional.
     expire_date = datetime.datetime.now()
     expire_date = expire_date + datetime.timedelta(days=7)
     
