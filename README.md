@@ -7,6 +7,8 @@
 ## Cookies and Session
 - Set Cookies
 ```python
+from flask import render_template, make_response
+
 @user.route('/set_cookie')
 def cart():
     # Render template
@@ -23,6 +25,8 @@ def cart():
 ## Handling Error Page
 - Change the number based on [HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes). No need to set the route handling.
 ```python
+from flask import render_template
+
 def page_not_found(e):
     # note that we set the 404 status explicitly
     return render_template('error/404.html'), 404
