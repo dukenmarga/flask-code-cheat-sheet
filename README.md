@@ -1,8 +1,17 @@
 # Flask Code Cheat Sheet
 
 ## Table of Contents
+- [Mix Function](#mix-function)
 - [Cookies and Session](#cookies-and-session)
 - [Handling Error Page](#handling-error-page)
+
+## Mix Function
+- Redirect to other URL
+```python
+from flask import redirect, url_for
+@app.route('/redirect')
+    return redirect(url_for('user.registration'))
+```
 
 ## Cookies and Session
 - Set Cookies
