@@ -15,8 +15,12 @@ def cart():
     template = render_template('user/set_cookie.html')
     resp = make_response(template)
     
+    # Add expiry date for cookies
+    expire_date = datetime.datetime.now()
+    expire_date = expire_date + datetime.timedelta(days=7)
+    
     # Add/update cookies
-    resp.set_cookie('product_name', 'Fujifilm X100T')
+    resp.set_cookie('product_name', 'Fujifilm X100T', expires=expire_date)
     resp.set_cookie('qty', '2')
     
     return resp
