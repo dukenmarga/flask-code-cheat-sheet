@@ -1,7 +1,10 @@
 # Flask Code Cheat Sheet
 
+## Table of Contents
+- [Cookies and Session](#cookies-and-session)
+- [Handling Error Page](#handling-error-page)
 
-# Cookies and Session
+## Cookies and Session
 - Set Cookies
 ```python
 @user.route('/set_cookie')
@@ -17,8 +20,8 @@ def cart():
     return resp
 ```
 
-# Handling Error page
-- Just change the number based on [HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes). No need to set the route handling.
+## Handling Error Page
+- Change the number based on [HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes). No need to set the route handling.
 ```python
 def page_not_found(e):
     # note that we set the 404 status explicitly
