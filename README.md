@@ -35,6 +35,18 @@ def cart():
     
     return resp
 ```
+- Set Session
+```python
+from flask import session, redirect, url_for
+
+@user.route('/set_session')
+def set_session():
+    # Set session
+    session['email'] = email
+    session['name'] = name
+    session['is_login'] = True
+    return redirect(url_for('user.dashboard'))
+```
 
 ## Handling Error Page
 - Change the number based on [HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes). No need to set the route handling.
